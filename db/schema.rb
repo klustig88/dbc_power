@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20131009212533) do
   create_table "users", force: true do |t|
     t.string   "username"
     t.string   "email"
+    t.string   "password_digest"
     t.string   "profile_image"
     t.string   "cohort_name"
     t.integer  "votes_left"
