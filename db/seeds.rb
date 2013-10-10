@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+students = DBC::User.all
+
+students.each do |student|
+  User.create(name: student.name, email: student.email)
+end
