@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20131009212533) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "profile_image"
-    t.string   "cohort_name"
+    t.string   "cohort_id"
     t.integer  "votes_left"
     t.integer  "current_score"
     t.string   "provider"
