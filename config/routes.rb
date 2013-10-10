@@ -43,7 +43,7 @@ match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
