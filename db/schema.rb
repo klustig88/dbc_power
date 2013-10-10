@@ -31,6 +31,11 @@ ActiveRecord::Schema.define(version: 20131009212533) do
     t.string   "cohort_name"
     t.integer  "votes_left"
     t.integer  "current_score"
+    t.string   "provider"
+    t.integer  "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
