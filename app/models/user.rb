@@ -1,17 +1,7 @@
 class User < ActiveRecord::Base
-  before_save :default_values
+  # before_save :default_values
   before_save :stock_votes
-
-  validates :email, uniqueness: true, format: /.+@.+\..+/
-
-  validates :username, uniqueness:true, presence:true
-
   has_many :comments
-  # has_secure_password
-
-  def default_values
-    self.current_score ||= 0
-  end
 
   def stock_votes
     self.votes_left ||= 3
@@ -22,6 +12,7 @@ class User < ActiveRecord::Base
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = auth.info.name
+      # user.email = auth.info.email
       user.oauth_token = auth.credentials.token
       user.oauth_expires_at = Time.at(auth.credentials.expires_at)
       user.save!
