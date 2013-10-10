@@ -14,7 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-
+ 
 
 # Ignore dbc_config.yml
 /config/initializers/dbc_config.yml

@@ -9,6 +9,17 @@
 students = DBC::User.all
 
 students.each do |student|
-
-   User.create!(username: student.name, email: student.email, password: "password", password_confirmation: "password", cohort_id: student.cohort_id)
+   Student.create!( uid: student.id,
+                    name: student.name,
+                    email: student.email,
+                    bio: student.bio,
+                    cohort_id: student.cohort_id,
+                    cohort_name: DBC::Cohort.find(student.cohort_id).name,
+                    github: student.profile[:github],
+                    quora: student.profile[:quora],
+                    twitter: student.profile[:twitter],
+                    facebook: student.profile[:facebook],
+                    linked_in: student.profile[:linked_in],
+                    about: student.profile[:about]
+                  )
 end
