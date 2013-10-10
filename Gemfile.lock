@@ -64,6 +64,7 @@ GEM
     execjs (2.0.2)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
+    gravtastic (3.2.6)
     hashie (2.0.5)
     hike (1.2.3)
     httpauth (0.2.0)
@@ -176,6 +177,7 @@ DEPENDENCIES
   capybara (= 2.1.0)
   coffee-rails (~> 4.0.0)
   dbc-ruby
+  gravtastic
   jbuilder (~> 1.2)
   jquery-rails
   oauth2 (~> 0.8.0)
