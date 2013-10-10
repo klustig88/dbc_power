@@ -1,9 +1,9 @@
 DbcPower::Application.routes.draw do
-match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
-match 'auth/failure', to: redirect('/'), via: [:get, :post]
 
-resources :users
-root to: "home#index"
+  match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+  match 'auth/failure', to: redirect('/'), via: [:get, :post]
+  resources :users
+  root to: "home#index"
 
 get '/logout', to: 'sessions#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
