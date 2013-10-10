@@ -45,6 +45,10 @@ gem 'omniauth'
 gem 'omniauth-oauth2'
 gem 'omniauth-dbc', :git => 'https://github.com/Devbootcamp/omniauth-dbc.git'
 
+gem 'binding_of_caller'
+
+gem 'better_errors'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
