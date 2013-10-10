@@ -8,6 +8,12 @@ class CreateUsers < ActiveRecord::Migration
       t.string :cohort_name
       t.integer :votes_left
       t.integer :current_score
+      # for oauth need provider uid name oauth_token oauth_expires_at:datetime
+      t.string  :provider
+      t.integer :uid
+      t.string  :name
+      t.string  :oauth_token
+      t.datetime  :oauth_expires_at
       t.timestamps
     end
   end
