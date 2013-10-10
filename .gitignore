@@ -14,4 +14,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-.Gemfile.lock
+
+
+# Ignore dbc_config.yml
+/config/initializers/dbc_config.yml
+
