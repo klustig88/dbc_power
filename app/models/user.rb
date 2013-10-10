@@ -1,11 +1,7 @@
 class User < ActiveRecord::Base
-  before_save :default_values
+  # before_save :default_values
   before_save :stock_votes
   has_many :comments
-
-  def default_values
-    self.current_score ||= 0
-  end
 
   def stock_votes
     self.votes_left ||= 3
