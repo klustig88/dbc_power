@@ -12,5 +12,10 @@
    <%= text_field_tag(:body) %>
    <%= submit_tag("Submit") %>
 <% end %>
-
 </ul>
+<ul class="comment">
+  <%@student.comments.each do |c|%>
+  <li><%=c.body%></li>
+  <%end%>
+
+</ul> 

@@ -20,7 +20,7 @@ class StudentsController < ApplicationController
         @student.upvote
         @student.save
         content_type :json
-          {}
+          {content: @comment.body}.to_json
         # return "your message has been sent"
         
       end
