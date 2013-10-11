@@ -8,6 +8,11 @@ class User < ActiveRecord::Base
     self.votes_left ||= 3
   end  
 
+  def remove_vote
+    self.votes_left -= 1
+    self.save
+  end  
+
  def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
       user.provider = auth.provider
