@@ -1,6 +1,5 @@
 class CohortsController < ApplicationController
   def show
-    p params
 
     @students= Student.all.where(cohort_id: params[:id])
     p @students
