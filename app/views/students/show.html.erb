@@ -7,10 +7,15 @@
   <a id="up_vote_button" href="/comment_vote">Up Vote Button</a>
  <li><%= @student.student_points %><%= link_to "Clicky", student_path, method: :patch, id: "up_vote_button" %></li>
   <li><%= @student.twitter %></li>
-<%= form_tag("/comment_vote") do |f|%>
-<%= f.text_field :body %>
-<%= f.hidden :student_id, :value => @student.id %>
-<%= f.submit %>
-<% end %>
 
+  <%= form_tag student_path(@student), :method => 'patch', :id => 'student'  do %>
+   <%= text_field_tag(:body) %>
+   <%= submit_tag("Submit") %>
+<% end %>
 </ul>
+<ul class="comment">
+  <%@student.comments.each do |c|%>
+  <li><%=c.body%></li>
+  <%end%>
+
+</ul> 
