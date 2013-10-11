@@ -1,5 +1,20 @@
 IMPORTANT: MUST ADD DBC OAUTH KEYS INTO YOUR SERVER'S BASH PROFILE FOR THIS TO WORK!
 
+Initial Setup
+
+- Create a dbc_config.yml in config > initializers folder
+
+- Add a DBC_KEY in your dbc_config.yml example: DBC_KEY: 7efef534jdf34
+  API Key can be found in your developer.devbootcamp.com account section.
+
+- Seed database with students. Run rake db:seed after creating and migration.
+  (This will approx. 10 mins.)
+
+To Do:
+
+- Add more RSpec tests.
+- Fix upvoting.
+
 == README
 
 This README would normally document whatever steps are necessary to get the
