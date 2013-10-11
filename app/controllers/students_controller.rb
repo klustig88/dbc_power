@@ -26,6 +26,9 @@ class StudentsController < ApplicationController
     redirect_to student_path(@student)
   end
 
+  def comment_vote
+    render :_up_vote_comment, layout: false
+  end
 
 
 end

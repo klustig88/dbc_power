@@ -7,6 +7,8 @@ DbcPower::Application.routes.draw do
   resources :cohorts
   root to: "home#index"
 
+  get '/comment_vote', to: 'students#comment_vote'
+
 get '/logout', to: 'sessions#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
