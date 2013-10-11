@@ -40,7 +40,13 @@ ActiveRecord::Schema.define(version: 20131010222030) do
   end
 
   create_table "users", force: true do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "profile_image"
+    t.string   "cohort_id"
     t.integer  "votes_left"
+    t.integer  "current_score"
     t.string   "provider"
     t.integer  "uid"
     t.string   "name"

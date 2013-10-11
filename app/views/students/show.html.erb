@@ -1,0 +1,9 @@
+<h1><%= @student.name %></h1>
+<ul>
+
+  <li><%= image_tag(@student.gravatar_url) %></li>
+  <li><%= @student.email %></li>
+  <li><%= @student.cohort_name %></li>
+  <li><%= @student.student_points %><%= link_to image_tag("https://news.ycombinator.com/grayarrow.gif"), student_path, method: :patch %></li>
+  <li><%= @student.twitter %></li>
+</ul>  

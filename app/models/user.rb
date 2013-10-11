@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   before_save :stock_votes
   has_many :comments
 
+
   def stock_votes
     self.votes_left ||= 3
   end  

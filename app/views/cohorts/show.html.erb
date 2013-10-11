@@ -1,0 +1,5 @@
+<h1><%= @cohort_name %></h1>
+  <% @students.each do |s| %>
+
+  <%= link_to (s.name),student_path(s.id)%> <%= s.student_points %> <%= image_tag(s.gravatar_url)%><br>
+  <%end%>
