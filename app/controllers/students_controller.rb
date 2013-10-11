@@ -16,9 +16,11 @@ class StudentsController < ApplicationController
       else   
         @student =Student.find(params[:id])
         current_user.remove_vote
-        @comment = Comment.create(student_id: params[:id], body: params[:comment][:body])
+        @comment = Comment.create(student_id: params[:id], body: params[:body])
         @student.upvote
         @student.save
+        content_type :json
+          {}
         # return "your message has been sent"
         
       end
