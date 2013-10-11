@@ -1,4 +1,4 @@
 <h1><%= @cohort_name %></h1>
   <% @students.each do |s| %>
-  <%= link_to (s.name),user_path(s.id), s.student_points %>
-  <end>
+  <%= link_to (s.name),user_path(s.id), s.student_points %><br>
+  <%end%>
