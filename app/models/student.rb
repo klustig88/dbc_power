@@ -8,6 +8,9 @@ class Student < ActiveRecord::Base
         self.student_points += 1
     end
 
+
+    private
+
     def default_value
       self.student_points ||= 0
     end
