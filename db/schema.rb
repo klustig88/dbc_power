@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131010222030) do
+ActiveRecord::Schema.define(version: 20131011154037) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20131010222030) do
   create_table "students", force: true do |t|
     t.integer "uid"
     t.text    "name"
-    t.string  "student_points"
+    t.integer "student_points"
     t.text    "email"
     t.text    "bio"
     t.integer "cohort_id"
@@ -40,13 +40,7 @@ ActiveRecord::Schema.define(version: 20131010222030) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "username"
-    t.string   "email"
-    t.string   "password_digest"
-    t.string   "profile_image"
-    t.string   "cohort_id"
     t.integer  "votes_left"
-    t.integer  "current_score"
     t.string   "provider"
     t.integer  "uid"
     t.string   "name"
