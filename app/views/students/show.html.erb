@@ -4,6 +4,13 @@
   <li><%= image_tag(@student.gravatar_url) %></li>
   <li><%= @student.email %></li>
   <li><%= @student.cohort_name %></li>
-  <li><%= @student.student_points %><%= link_to image_tag("https://news.ycombinator.com/grayarrow.gif"), student_path, method: :patch %></li>
+  <a id="up_vote_button" href="/comment_vote">Up Vote Button</a>
+ <li><%= @student.student_points %><%= link_to "Clicky", student_path, method: :patch, id: "up_vote_button" %></li>
   <li><%= @student.twitter %></li>
-</ul>  
+<%= form_tag("/comment_vote") do |f|%>
+<%= f.text_field :body %>
+<%= f.hidden :student_id, :value => @student.id %>
+<%= f.submit %>
+<% end %>
+
+</ul>
