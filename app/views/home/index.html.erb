@@ -1,8 +1,10 @@
 <h1>Welcome to DBC Power Rankings</h1>
 
+<% if current_user %>
+
 <%= link_to ("NightHawks"), cohort_path(26) %>
 <%= link_to ("FireFlies"), cohort_path(28) %>
 <%= link_to ("Coyotes"), cohort_path(30) %>
 <%= link_to ("Salamanders"), cohort_path(32) %>
 
-
+<% end %>
