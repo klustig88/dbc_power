@@ -19,16 +19,21 @@ class StudentsController < ApplicationController
     p current_user
     p current_user.votes_left
     if current_user
-      if current_user.votes_left == 0
-        # return "no_more_votes"
+      if current_user.votes_left <= 0
+          render :json => {:comment => "Dude buy some votes!"}
       else   
-        p @student =Student.find(params[:id])
-        p current_user.remove_vote
-        p @comment = Comment.create(student_id: params[:id], body: params[:body])
-        p @student.upvote
-        p @student.save
+        @student =Student.find(params[:id])
+        current_user.remove_vote
+        @comment = Comment.create(student_id: params[:id], body: params[:body])
+       p @comment.save 
+        if @comment.save == false
+          return render :json => {:comment => "Make it bigger!"}
+        else
+          @student.upvote
+          @student.save
+          render :json => {:comment => @comment.body}           
+        end  
 
-          render :json => {:comment => @comment.body}
         # return "your message has been sent"
         
       end
