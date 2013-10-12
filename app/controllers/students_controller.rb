@@ -1,8 +1,13 @@
 class StudentsController < ApplicationController
 
+  def index
+    @students = Student.all
+    @top_10 = @students.sort{|s2,s1| s1.student_points <=> s2.student_points}.first(10)
+  end
+
+
   def show
     @student=Student.find(params[:id])
-
   end
 
   def edit
