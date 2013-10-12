@@ -8,6 +8,7 @@ class StudentsController < ApplicationController
 
   def show
     @student=Student.find(params[:id])
+    @comments= @student.comments.reverse_order
   end
 
   def edit
