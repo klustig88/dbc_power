@@ -9,7 +9,9 @@ $(document).ready(function() {
       var url = $(this).attr('action')
       var data = $(this).serialize();
       console.log(data)
-      // $.post(url,)
+      $.post(url,data,function(response){
+        $('.comment').append("<li>"+ response.comment  +"</li>");
+      });
       console.log
     
 
