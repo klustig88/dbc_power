@@ -1,7 +1,7 @@
 	<ol>
 	<h1>Leader Board</h1>
 	<% @top_10.each do |student| %>
-		<li><%= student.name %> from <%= student.cohort_name %> for has <%= student.student_points %> points.</li>
+		<li><%= link_to student.name, student_path(student) %> from <%= link_to student.cohort_name, cohort_path(student.cohort_id) %> for has <%= student.student_points %> points.</li>
 		<%= image_tag(student.gravatar_url) %>
 	<% end %>
 	</ol>
