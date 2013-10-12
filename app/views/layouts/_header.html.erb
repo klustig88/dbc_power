@@ -12,7 +12,8 @@
     <li><%= link_to "Profile", student_path(Student.where(uid: current_user.uid).first)  %></li>
     <%end%>
     <li><%= link_to "Leader Board", students_path %></li>
-    <li>Contact Us</li>
+    <li><%= link_to "Contact us!", "http://youbigdummy.com/" %></li>
+    
   </ul> 
 
 </div>

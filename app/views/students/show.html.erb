@@ -1,5 +1,5 @@
 <h1><%= @student.name %></h1>
-<ul>
+<ul class="info">
 
   <li><%= image_tag(@student.gravatar_url) %></li>
   <li><%= @student.email %></li>
@@ -14,7 +14,7 @@
 <% end %>
 </ul>
 <ul class="comment">
-  <%@student.comments.each do |c|%>
+  <%@comments.each do |c|%>
   <li><%=c.body%></li>
   <%end%>
 
