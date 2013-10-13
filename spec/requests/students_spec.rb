@@ -11,6 +11,11 @@ describe "Students" do
     expect(page).to have_content('Leader Board')
   end
 
+# it "should have the text 'Alyssa Diaz'" do
+#     visit '/students/275'
+#     expect(page).to have_content('Alyssa')
+# end
+
 end
 
 
