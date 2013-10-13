@@ -21,13 +21,13 @@ class StudentsController < ApplicationController
           render :json => {:comment => "Dude buy some votes!"}
       else   
         @student =Student.find(params[:id])
-        current_user.remove_vote
         @comment = Comment.create(student_id: params[:id], body: params[:body])
         @comment.save 
         if @comment.save == false
           return render :json => {:comment => "Make it bigger!"}
         else
           @student.upvote
+          current_user.remove_vote
           @student.save
           render :json => {:comment => @comment.body}           
         end  
