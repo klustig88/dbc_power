@@ -1,12 +1,28 @@
-<h1>Welcome to DBC Power Rankings</h1>
+  <% if current_user %>
 
-<% if current_user %>
 
-<%= link_to ("NightHawks"), cohort_path(26) %>
-<%= link_to ("FireFlies"), cohort_path(28) %>
-<%= link_to ("Coyotes"), cohort_path(30) %>
-<%= link_to ("Salamanders"), cohort_path(32) %>
-<br><br>
-<%= link_to ("Leader Board"), students_path %>
+    <div id="cohort_list">
+      <h1 class="spirit_heading">Choose Your <span>Spirit Animal</span></h1>
 
-<% end %>
+      <%= link_to image_tag("nighthawks.jpg", class: "cohort_image"), cohort_path(26) %>
+      <%= link_to image_tag("fireflies.jpg", class: "cohort_image"), cohort_path(28) %>
+      <%= link_to image_tag("coyotes.jpg", class: "cohort_image"), cohort_path(30) %>
+      <%= link_to image_tag("salamanders.jpg", class: "cohort_image"), cohort_path(32) %>
+    </div>
+
+  <% else %>
+
+    <div class="inner">
+      <div class="logo">
+        <%= image_tag("40df87dd0e58743609507b50b7bd7e36.jpeg", class: "founders") %>
+        <%= image_tag("70f916b724a80587af391696d03ddf8a.jpeg", class: "founders") %>
+        <%= image_tag("685a7bcfc0fd1d4b4987e349b94c58f0.jpeg", class: "founders") %>
+        <%= image_tag("d0b6ff8c91b4b453455d922e3b09b798.jpeg", class: "founders") %>
+      </div>
+
+      <h1 class="welcome_msg">Drop sciences. Get points.</span></h1>
+      <p>Points can also be bought with Bitcoins.</p>
+      <%= link_to "Sign In", "/auth/dbc", id: "sign_in" %>
+    </div>
+
+  <% end %>
