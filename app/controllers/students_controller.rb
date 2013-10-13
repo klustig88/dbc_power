@@ -3,6 +3,7 @@ class StudentsController < ApplicationController
   def index
     @students = Student.all
     @top_10 = @students.sort{|s2,s1| s1.student_points <=> s2.student_points}.first(10)
+    
   end
 
 
@@ -14,8 +15,7 @@ class StudentsController < ApplicationController
 
   def update
     
-    current_user
-    current_user.votes_left
+
     if current_user
       if current_user.votes_left <= 0
           render :json => {:comment => "Dude buy some votes!"}
