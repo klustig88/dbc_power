@@ -1,15 +1,15 @@
 <% if current_user %>
   <header>
-  <ul id="settings">
-    <a id="close_settings">Close</a>
-    <% if current_user %>
-      <li><%= link_to "Profile", student_path(Student.where(uid: current_user.uid).first)  %></li>
-      <li><%= link_to "Leader Board", students_path %></li>
-      <li>Contact Us</li>
-      <li><%= link_to "Sign out", logout_path, id: "sign_out" %></li>
-    <%end%>
-  </ul>
-
     <a id="open_settings">open settings</a>
+
+    <ul id="settings">
+      <a id="close_settings">Close</a>
+
+        <li><%= link_to "Profile", student_path(Student.where(uid: current_user.uid).first)  %></li>
+        <li><%= link_to "Leader Board", students_path %></li>
+        <li>Contact Us</li>
+        <li><%= link_to "Sign out", logout_path, id: "sign_out" %></li>
+
+    </ul>
   </header>
 <% end %>
