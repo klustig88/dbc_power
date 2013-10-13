@@ -1,19 +1,17 @@
-<header>
-<div id="user-widget">
-  <% if current_user %>
-    Welcome <strong><%= current_user.name %></strong>!
-    
-    <%= link_to "Sign out", logout_path, id: "sign_out" %>
-  <% else %>
-    <%= link_to "Sign in with DBC_Socrates", "/auth/dbc", id: "sign_in" %>
-  <% end %>
-  <ul>
+<% if current_user %>
+  <ul id="settings">
+    <a id="close_settings">Close</a>
     <% if current_user %>
-    <li><%= link_to "Profile", student_path(Student.where(uid: current_user.uid).first)  %></li>
+      <li><%= link_to "Profile", student_path(Student.where(uid: current_user.uid).first)  %></li>
+      <li><%= link_to "Leader Board", students_path %></li>
+      <li>Contact Us</li>
+      <li><%= link_to "Sign out", logout_path, id: "sign_out" %></li>
     <%end%>
-    <li><%= link_to "Leader Board", students_path %></li>
-    <li>Contact Us</li>
-  </ul> 
+  </ul>
 
-</div>
-</header>
+  <header>
+    Welcome <strong><%= current_user.name %></strong>!
+
+    <a id="open_settings">open settings</a>
+  </header>
+<% end %>

@@ -97,9 +97,183 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body {
+    background: #e3e3e3;
+}
+
+body.front_page {
+    background: #fff;
+}
+
+@font-face {
+    font-family: 'bebasreg';
+    src: url('bebasneue-webfont.eot');
+    src: url('bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('bebasneue-webfont.woff') format('woff'),
+         url('bebasneue-webfont.ttf') format('truetype'),
+         url('bebasneue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'opensanslight';
+    src: url('opensans-light-webfont.eot');
+    src: url('opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('opensans-light-webfont.woff') format('woff'),
+         url('opensans-light-webfont.ttf') format('truetype'),
+         url('opensans-light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'opensansbold';
+    src: url('opensans-bold-webfont.eot');
+    src: url('opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('opensans-bold-webfont.woff') format('woff'),
+         url('opensans-bold-webfont.ttf') format('truetype'),
+         url('opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'opensansreg';
+    src: url('opensans-regular-webfont.eot');
+    src: url('opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('opensans-regular-webfont.woff') format('woff'),
+         url('opensans-regular-webfont.ttf') format('truetype'),
+         url('opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'opensanssemi';
+    src: url('opensans-semibold-webfont.eot');
+    src: url('opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('opensans-semibold-webfont.woff') format('woff'),
+         url('opensans-semibold-webfont.ttf') format('truetype'),
+         url('opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #3d4858;
+}
+    #open_settings {
+        float: right;
+        cursor: pointer;
+    }
+    #close_settings {
+        cursor: pointer;
+    }
+    #settings{
+        position: fixed;
+        width: 300px;
+        right: -300px;
+        top: 0;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        background: #888;
+        z-index: 1;
+
+        -moz-box-shadow:    3px 3px 5px 6px #ccc;
+        -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+        box-shadow:         3px 3px 5px 6px #ccc;
+    }
+
+#cohort_list {
+    max-width: 1200px;
+    width: 100%;
+    margin: 100px auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+    .spirit_heading {
+        margin-top: 0;
+        font: normal 60px opensanslight;
+        color: #444;
+        text-shadow: 0 1px 1px #fff;
+    }
+    .spirit_heading span{
+        font: normal 60px opensanssemi;
+    }
+    .cohort_image {
+        width: 180px;
+        margin: 0 5px 0 5px;
+        border-radius: 100px;
+    }
+        .cohort_image:hover {
+            -moz-box-shadow:    0 0 40px 6px #999;
+            -webkit-box-shadow: 0 0 40px 6px #999;
+            box-shadow:         0 0 40px 6px #999;
+        }
 
 
-
+/* Front Page */
+.welcome {
+    overflow: hidden;
+    padding: 0 0 100px 0;
+}
+    .inner {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+        .logo {
+            margin: 60px 0 0 0;
+            text-align: center;
+        }
+        .founders {
+            border-radius: 100px;
+        }
+        .welcome_msg {
+            margin: 30px 0 0 0;
+            font: normal 36px opensansreg;
+            color: #32393d;
+            text-align: center;
+        }
+            .styled{
+                color: #fff;
+                display: block;
+                font: normal 30px opensanslight;
+                text-transform: lowercase;
+            }
+        .inner p {
+            font: normal 14px arial;
+            margin: 10px 0 0 0;
+            text-align: center;
+            color: #888;
+        }
+        #sign_in {
+            width: 430px;
+            padding: 10px 0 10px 0;
+            margin: 30px auto;
+            background: #3a5898;
+            display: block;
+            border-radius: 5px;
+            text-align: center;
+            font: normal 24px opensanslight;
+            color: #fff;
+            text-decoration: none;
+        }
+            #sign_in:hover {
+                background: #264380;
+            }
 
 
 

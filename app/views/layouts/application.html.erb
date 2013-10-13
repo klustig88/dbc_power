@@ -7,11 +7,13 @@
 
   <%= csrf_meta_tags %>
 </head>
-<body>
-<!-- following user-widget is for oauth  -->
-<%= render 'layouts/header' %>
-<%= yield %>
-
-
+<% if current_user %>
+  <body>
+<% else %>
+  <body class="front_page">
+<% end %>
+  <!-- following user-widget is for oauth  -->
+  <%= render 'layouts/header' %>
+  <%= yield %>
 </body>
 </html>
