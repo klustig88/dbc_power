@@ -169,13 +169,15 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #3d4858;
+    padding: 20px 0 20px 0;
+    background: #fff;
+
+    -webkit-box-shadow: 0 1px 3px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 1px 3px 1px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,0.3);
 }
     #open_settings {
         float: right;
-        cursor: pointer;
-    }
-    #close_settings {
         cursor: pointer;
     }
     #settings{
@@ -187,13 +189,52 @@ header {
         padding: 0;
         margin: 0;
         list-style: none;
-        background: #888;
+        background: #444;
         z-index: 1;
 
-        -moz-box-shadow:    inset 3px 3px 5px 6px #ccc;
-        -webkit-box-shadow: inset 3px 3px 5px 6px #ccc;
-        box-shadow:         inset 3px 3px 5px 6px #ccc;
+        -webkit-box-shadow: inset 10px 0 10px -5px rgba(0,0,0,0.5);
+        -moz-box-shadow: inset 10px 0 10px -5px rgba(0,0,0,0.5);
+        box-shadow: inset 10px 0 10px -5px rgba(0,0,0,0.5);
     }
+        #settings li{
+            width: 300px;
+            padding: 10px 0 10px 0;
+            border-bottom: 1px solid #555;
+            margin: 0 0 0 0;
+        }
+            .setting_titles {
+                margin-left: 20px;
+            }
+            #settings li a {
+                color: #eee;
+                text-decoration: none;
+            }
+                #settings li a:hover {
+                    color: #FF5E08;
+                }
+        .setting_header{
+            position: relative;
+            width: 300px;
+            padding: 7px 0 7px 0;
+            background: #333;
+            overflow: hidden;
+
+            -webkit-box-shadow: inset 10px 0 10px -5px rgba(0,0,0,0.5);
+            -moz-box-shadow: inset 10px 0 10px -5px rgba(0,0,0,0.5);
+            box-shadow: inset 10px 0 10px -5px rgba(0,0,0,0.5);
+        }
+            .setting_header h2 {
+                margin: 0 0 0 20px;
+                font: normal 18px opensanslight;
+                text-align: left;
+                color: #eee;
+            }
+            #close_settings {
+                position: absolute;
+                right: 10px;
+                cursor: pointer;
+            }
+
 
 #cohort_list {
     max-width: 1200px;
@@ -216,6 +257,10 @@ header {
         width: 180px;
         margin: 0 5px 0 5px;
         border-radius: 100px;
+
+        -webkit-box-shadow: 0 1px 0 1px rgba(255,255,255,0.5);
+        -moz-box-shadow: 0 1px 0 1px rgba(255,255,255,0.5);
+        box-shadow: 0 1px 0 1px rgba(255,255,255,0.5);
     }
         .cohort_image:hover {
             -moz-box-shadow:    0 0 40px 6px #999;
