@@ -11,11 +11,6 @@ describe "Students" do
     expect(page).to have_content('Leader Board')
   end
 
-  it "should have the content 'Contact Us'" do
-    visit '/students'
-    expect(page).to have_content('Contact us')
-  end
-
 end
 
 
