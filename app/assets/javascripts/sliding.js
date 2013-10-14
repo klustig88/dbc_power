@@ -1,4 +1,4 @@
-$(function() {
+function menu_slide() {
   $('#open_settings').on('click', function() {
     $('#settings').animate({right: '0'}, 1000, function() {
 
@@ -10,4 +10,31 @@ $(function() {
 
     });
   });
+
+  // $('.student_cluster').hover(function() {
+  //   $(this).find('.student_vote_show').show();
+  // });
+
+  // $('.student_cluster').mouseenter(function() {
+  //   $(this).find('.student_vote_show').show();
+  // });
+
+  $( ".student_cluster" )
+  .mouseenter(function() {
+    $( this ).find( ".student_vote_show" ).fadeIn();
+  })
+  .mouseleave(function() {
+    $( this ).find( ".student_vote_show" ).fadeOut();
+  });
+
+}
+
+$(function() {
+  setup();
 });
+$(window).bind('page:change', function() {
+  setup();
+});
+function setup() {
+    menu_slide();
+}

@@ -1,5 +1,17 @@
-<h1><%= @cohort_name %></h1>
-  <% @students.each do |s| %>
+<ul class="cohort_members clearfix">
+  <h1><%= @cohort_name %></h1>
 
-  <%= link_to (s.name),student_path(s.id)%> <%= s.student_points %> <%= image_tag(s.gravatar_url)%><br>
+  <% @students.each do |s| %>
+    <li class="student_cluster">
+      <%= image_tag(s.gravatar_url, class: "student_image") %>
+
+      <div class="student_info">
+        <span class="student_points"><%= s.student_points %></span>
+        <h3 class="student_name"><%= link_to (s.name), student_path(s.id) %></h3>
+        <div class="student_vote_show">
+          <%= link_to "Give Point", student_path(s.id), class: "point_button" %>
+        </div>
+      </div>
+    </li>
   <%end%>
+</ul>
