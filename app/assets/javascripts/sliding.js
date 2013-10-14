@@ -10,29 +10,31 @@ function menu_slide() {
 
     });
   });
+
+  // $('.student_cluster').hover(function() {
+  //   $(this).find('.student_vote_show').show();
+  // });
+
+  // $('.student_cluster').mouseenter(function() {
+  //   $(this).find('.student_vote_show').show();
+  // });
+
+  $( ".student_cluster" )
+  .mouseenter(function() {
+    $( this ).find( ".student_vote_show" ).fadeIn();
+  })
+  .mouseleave(function() {
+    $( this ).find( ".student_vote_show" ).fadeOut();
+  });
+
 }
 
-
-// $(function() {
-//   $('#open_settings').on('click', function() {
-//     $('#settings').animate({right: '0'}, 1000, function() {
-
-//     });
-//   });
-
-//   $('#close_settings').on('click', function() {
-//     $('#settings').animate({right: '-300'}, 1000, function() {
-
-//     });
-//   });
-// });
-
 $(function() {
-  initPage();
+  setup();
 });
 $(window).bind('page:change', function() {
-  initPage();
+  setup();
 });
-function initPage() {
+function setup() {
     menu_slide();
 }

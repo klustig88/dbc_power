@@ -175,6 +175,7 @@ header {
     -webkit-box-shadow: 0 1px 3px 1px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 1px 3px 1px rgba(0,0,0,0.3);
     box-shadow: 0 1px 3px 1px rgba(0,0,0,0.3);
+    z-index: 1;
 }
     #open_settings {
         float: right;
@@ -267,6 +268,86 @@ header {
             -webkit-box-shadow: 0 0 40px 6px #999;
             box-shadow:         0 0 40px 6px #999;
         }
+
+.cohort_members {
+    width: 960px;
+    margin: 100px auto;
+    padding: 0 0 100px 0;
+    list-style: none;
+}
+    .cohort_members h1 {
+        margin: 0;
+        text-align: center;
+        font: normal 60px opensanslight;
+        text-shadow: 0 1px 1px #fff;
+    }
+    .student_cluster{
+        float: left;
+        position: relative;
+        width: 220px;
+        height: 100px;
+        margin: 50px 10px 0 10px;
+        padding: 0;
+        background: #fff;
+        border-radius: 5px;
+
+        -webkit-box-shadow: 0 1px 3px 1px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0 1px 3px 1px rgba(0,0,0,0.1);
+        box-shadow: 0 1px 3px 1px rgba(0,0,0,0.1);
+    }
+    .student_image {
+        float: left;
+        width: 60px;
+        margin: 5px 0 0 5px;
+        border-radius: 100px;
+    }
+    .student_info {
+        float: left;
+        position: relative;
+        width: 140px;
+        margin: 0 0 0 10px;
+    }
+        .student_points {
+            margin: 10px 0 0 0;
+            padding: 0 15px;
+            background: #8AAB67;
+            color: #fff;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .student_name {
+            margin: 5px 0 0 0;
+            font: normal 14px opensansbold;
+        }
+            .student_name a {
+                color: #333;
+                text-decoration: none;
+            }
+            .give_point {
+                width: 140px;
+                margin: 5px 0 0 0;
+                padding: 3px 0 3px 0;
+                background: #21AAFF;
+                display: block;
+                text-align: center;
+            }
+        .student_vote_show {
+            position: absolute;
+            top: 0;
+            right: -5px;
+            width: 220px;
+            height: 100px;
+            background: #21AAFF;
+            border-radius: 5px;
+            display: none;
+            text-align: center;
+        }
+            .point_button {
+                display: block;
+                margin: 40px 0 0 0;
+                text-decoration: none;
+                color: #fff;
+            }
 
 
 /* Front Page */
