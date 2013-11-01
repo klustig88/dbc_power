@@ -10,36 +10,15 @@ Initial Setup
 - Seed database with students. Run rake db:seed after creating and migration.
   (This will approx. 10 mins.)
 
-To Do:
 
-- Add more RSpec tests.
-- Fix upvoting.
 
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A ranking system for the TA process at Dev BootCamp.  
+Users are allowed to give points to three different individuals each week.  User will give the points to the individuals
+who helped them the most during the week.  
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Using the Dev BootCamp Socrates API to pull in all the information for each student that is currently students or alumni of
+Dev BootCamp and use the API as authentication for the website.  Each student has their Gravatar photo associated with them as well, using the gravatar gem.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
